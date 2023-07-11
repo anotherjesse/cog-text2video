@@ -41,7 +41,7 @@ class Predictor(BasePredictor):
         ),
         fps: int = Input(description="fps for the output video", default=8),
         model: str = Input(
-            description="Model to use", default="xl", choices=["xl", "576w", "potat1"]
+            description="Model to use", default="xl", choices=["xl", "576w", "potat1", "animov-512x"]
         ),
         batch_size: int = Input(description="Batch size", default=1, ge=1),
         remove_watermark: bool = Input(

@@ -37,4 +37,12 @@ pipe = DiffusionPipeline.from_pretrained(
 
 pipe.save_pretrained(MODEL_CACHE + "/potat1")
 
+pipe = DiffusionPipeline.from_pretrained(
+    "strangeman3107/animov-512x",
+    torch_dtype=torch.float16,
+    cache_dir=TMP_CACHE,
+)
+
+pipe.save_pretrained(MODEL_CACHE + "/animov-512x")
+
 shutil.rmtree(TMP_CACHE)
